@@ -1,6 +1,7 @@
 var socket = io();
 
-function launch(pin) {
+function launch() {
+    console.log('launch');
     socket.emit('launch');
 }
 
