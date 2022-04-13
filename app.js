@@ -5,12 +5,15 @@ var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
 var path = require('path');
-const { SerialPort } = require('serialport');
+const { SerialPort, ReadlineParser } = require('serialport');
 
 // ls /dev/tty* to check port arduino connected to
 const port = new SerialPort({ path: "/dev/ttyACM0", baudRate: 9600 });
+const parser = new ReadlineParser();
+port.pipe(parser);
 
 port.on('open', () => console.log("Serial port open"));
+parser.on('data', console.log);
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/socket.io-client/dist')));
