@@ -13,7 +13,9 @@ const parser = new ReadlineParser();
 port.pipe(parser);
 
 port.on('open', () => console.log("Serial port open"));
-parser.on('data', console.log);
+parser.on('data', data => {
+  io.sockets.emit('updateClient', data);
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/socket.io-client/dist')));
@@ -35,6 +37,8 @@ io.on('connection', (socket) => {
         console.log("iolaunch");
         launch();
     });
+    //update index.html
+    // socket.emit('updateClient', update());
 });
 
 http.listen(3000, () => {
