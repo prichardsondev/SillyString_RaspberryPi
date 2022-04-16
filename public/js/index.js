@@ -9,7 +9,9 @@ socket.on('updateClient', data => {
     var temp = document.getElementById("temp");
     var distance = document.getElementById("distance");
 
-    console.log(data);
+    data = JSON.parse(data);
+    temp.innerHTML =`${data.fahrenheit} &#8457;`;
+    distance.innerHTML = `${data.inches}"`;
 
     // (data.lamp  === 0 ? (lamp.innerHTML = "Lamp Off", lamp.style.color = "#fff") :
     //     (lamp.innerHTML = "Lamp On", lamp.style.color = "#ffff00"));
