@@ -12,12 +12,6 @@ socket.on('updateClient', data => {
     data = JSON.parse(data);
     temp.innerHTML =`${data.fahrenheit} &#8457;`;
     distance.innerHTML = `${data.inches}"`;
-
-    // (data.lamp  === 0 ? (lamp.innerHTML = "Lamp Off", lamp.style.color = "#fff") :
-    //     (lamp.innerHTML = "Lamp On", lamp.style.color = "#ffff00"));
-
-    // (data.led === 0 ? (led.innerHTML = "LED Off", led.style.color = "#fff") :
-    //     (led.innerHTML = "LED On", led.style.color = "#ffff00"));
 });
 
 

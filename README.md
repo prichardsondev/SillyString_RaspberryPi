@@ -3,8 +3,11 @@
 In the following steps we will install the Raspberry Pi </br>
 Operating System and Clone our Server
 
+#### To set up Arduino and see project overview.
+[Arduino](https://github.com/prichardsondev/SillyString_Arduino)
+
 ### Raspberry Pi OS
-[Video](https://www.placeholder.com)
+[Overview](https://www....com)
 
 [Raspberry PI Imager](https://www.raspberrypi.com/software/)
 
@@ -35,9 +38,11 @@ cd SillyString_RaspberryPi
 npm i
 ```
 
-### Check PI IP address
+### Check PI's IP address
 ```
 ip addr
+Note you can also use piName:3000
+e.g. http://prichardsontest:3000/
 ```
 
 ### Run your server
@@ -45,9 +50,11 @@ ip addr
 node app.js
 ```
 
-### Browse to piIPAddress:3000
+### Browse to PI's IP Address
 ```
-cd SillyString_RaspberryPi
+e.g. PIip:3000
+Note you can also use piName:3000
+http://prichardsontest:3000/ 
 ```
 
 ### Fun
@@ -55,7 +62,7 @@ cd SillyString_RaspberryPi
 Click the "Launch" button )
 ```
 
-### Stop your sever
+### To stop your sever
 ```
 ctrl+c
 ```

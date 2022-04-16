@@ -2,7 +2,7 @@
   "name": "sillystring_raspberrypi",
   "version": "1.0.0",
   "description": "In the following steps we will install the Raspberry Pi </br>\r Operating System and Clone our Server code.",
-  "main": "app.bkup.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
