@@ -40,7 +40,7 @@ sudo apt-get install -y nodejs
 ---
 ### Install Git
 ```
-sudo apt install git
+sudo apt install -y git
 ```
 ---
 ### Clone SillyString_RaspberryPi Repository
